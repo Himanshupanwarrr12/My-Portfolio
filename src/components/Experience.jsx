@@ -9,7 +9,7 @@ const EXPERIENCE = [
   {
     company: 'Slog Solutions Pvt. Ltd.',
     role: 'Software Developer Intern',
-    duration: 'Apr 2026 – Present',
+    duration: 'Apr 2026 - Jun 2026 (3 months)',
     location: 'Dehradun, India',
     bullets: [
       'Built an AI-powered LMS using Ollama with translation, TTS, summarization, and prompt assistance features',
