@@ -1,0 +1,476 @@
+/* ================================================================
+   GLOBAL STYLES — Cartoon / Anime Theme
+   Palette: Warm paper cream, bold red, sunny yellow, teal, comic black
+   ================================================================ */
+
+@import "tailwindcss";
+
+/* ----- Tailwind Theme Extension ----- */
+@theme {
+  /* Cartoon Anime Palette */
+  --bg-primary: #FDF6EC;
+  --bg-secondary: #FFF8EE;
+  --bg-accent: #FFE8CC;
+  --text-primary: #1D1D1D;
+  --text-secondary: #3A3A3A;
+  --text-muted: #6B6B6B;
+  --accent: #E63946;
+  --accent-hover: #C62833;
+  --accent-light: #FFD166;
+  --card-bg: #FFFFFF;
+  --border: #1D1D1D;
+  --shadow-warm: rgba(0, 0, 0, 0.08);
+
+  /* Extra cartoon colors */
+  --teal: #2EC4B6;
+  --yellow: #FFD166;
+  --pink: #FF6B8A;
+  --red: #E63946;
+
+  /* Map to Tailwind colors for backward compatibility with existing JSX classes */
+  --color-cream-100: var(--bg-primary);
+  --color-cream-200: var(--bg-secondary);
+  --color-cream-300: var(--bg-accent);
+  --color-cream-400: var(--border);
+
+  --color-warm-500: var(--accent);
+  --color-warm-600: var(--accent-hover);
+  --color-warm-700: var(--text-secondary);
+  --color-warm-800: var(--text-muted);
+  --color-warm-900: var(--text-primary);
+
+  /* Font families */
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+}
+
+/* ----- Base Styles ----- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----- Selection color ----- */
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* ----- Headings default to display font ----- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+/* ================================================================
+   TYPEWRITER CURSOR BLINK
+   ================================================================ */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  animation: blink 0.75s step-end infinite;
+}
+
+/* ================================================================
+   FADE-IN + SLIDE-UP ANIMATION (IntersectionObserver)
+   ================================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children (used in Skills) */
+.stagger-child {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger-child.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================================================
+   CARTOON FLOATING BLOBS — flat colored shapes
+   ================================================================ */
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(30px, -40px) scale(1.05);
+  }
+
+  50% {
+    transform: translate(-20px, -70px) scale(0.95);
+  }
+
+  75% {
+    transform: translate(40px, -30px) scale(1.02);
+  }
+}
+
+@keyframes float-medium {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-40px, -50px) scale(1.08);
+  }
+
+  66% {
+    transform: translate(30px, -20px) scale(0.96);
+  }
+}
+
+@keyframes float-reverse {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  30% {
+    transform: translate(50px, 30px) scale(1.04);
+  }
+
+  60% {
+    transform: translate(-30px, 50px) scale(0.97);
+  }
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+  will-change: transform;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 209, 102, 0.3) 0%, transparent 70%);
+  animation: float-slow 18s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(46, 196, 182, 0.25) 0%, transparent 70%);
+  animation: float-medium 14s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 107, 138, 0.2) 0%, transparent 70%);
+  animation: float-reverse 20s ease-in-out infinite;
+}
+
+/* ================================================================
+   ANIMATED GRADIENT MESH — for Hero / section backgrounds
+   ================================================================ */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-mesh {
+  background: linear-gradient(135deg,
+      rgba(255, 209, 102, 0.12) 0%,
+      rgba(253, 246, 236, 0.5) 25%,
+      rgba(46, 196, 182, 0.08) 50%,
+      rgba(230, 57, 70, 0.06) 75%,
+      rgba(253, 246, 236, 0.5) 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 16s ease infinite;
+}
+
+/* ================================================================
+   FLOATING PARTICLES (CSS-only dots) — cartoon colored
+   ================================================================ */
+@keyframes drift-up {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.6;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-100vh) translateX(40px);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  animation: drift-up linear infinite;
+}
+
+.particle:nth-child(2) {
+  background: var(--teal);
+}
+
+.particle:nth-child(3) {
+  background: var(--yellow);
+}
+
+/* ================================================================
+   SECTION DIVIDER — cartoon dashed line
+   ================================================================ */
+.section-divider {
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--border) 0px,
+    var(--border) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  border: none;
+  margin: 0;
+}
+
+/* ================================================================
+   CARTOON CARD STYLE — thick borders, offset shadow
+   ================================================================ */
+.glass-card {
+  background: var(--card-bg);
+  border: 2.5px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 4px 4px 0px var(--border);
+}
+
+/* ================================================================
+   SCROLLBAR STYLING (cartoon tones)
+   ================================================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ================================================================
+   ANIMATED UNDERLINE for section headings
+   ================================================================ */
+@keyframes expand-line {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 60px;
+  }
+}
+
+.heading-line {
+  display: block;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.reveal.visible .heading-line {
+  animation: expand-line 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.3s;
+  width: 0;
+}
+
+/* ================================================================
+   CARTOON THEME UTILITIES
+   ================================================================ */
+.hero-bg {
+  background: var(--bg-primary);
+}
+
+.name-gradient {
+  color: var(--text-primary);
+}
+
+.global-card {
+  background: var(--card-bg);
+  border: 2.5px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 5px 5px 0px var(--border);
+  transition: all 0.3s ease;
+}
+
+.global-card:hover {
+  box-shadow: 7px 7px 0px var(--border);
+  transform: translateY(-4px);
+}
+
+.section-title {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.section-line {
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 12px auto;
+  border-radius: 2px;
+}
+
+@keyframes bounce-down {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-bounce-down {
+  animation: bounce-down 1.2s ease infinite;
+}
+
+/* ================================================================
+   CARTOON DOODLE DECORATIONS
+   ================================================================ */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+  70% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.cartoon-wiggle {
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+.cartoon-pop {
+  animation: pop-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Doodle dot pattern for section backgrounds */
+.doodle-dots {
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.06;
+}
+
+/* ================================================================
+   EMO ROBO CHARACTER ANIMATIONS
+   ================================================================ */
+@keyframes robo-idle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes antenna-wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(6deg); }
+  75% { transform: rotate(-6deg); }
+}
+
+@keyframes antenna-glow {
+  0%, 100% { box-shadow: 0 0 6px rgba(230, 57, 70, 0.4); }
+  50% { box-shadow: 0 0 16px rgba(230, 57, 70, 0.8), 0 0 30px rgba(230, 57, 70, 0.3); }
+}
+
+@keyframes arm-wave-left {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(4deg); }
+}
+
+@keyframes arm-wave-right {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-4deg); }
+}
+
+@keyframes status-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ================================================================
+   MAGNETIC HOVER UTILITY — subtle card tilt toward cursor
+   ================================================================ */
+.magnetic-hover {
+  transition: transform 0.2s ease-out;
+}
