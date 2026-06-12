@@ -12,15 +12,15 @@ const PROJECTS = [
     stack: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'TypeScript', 'WebSockets'],
     description:
       'A real-time MERN application for live developer collaboration and matchmaking. Features WebSocket communication, JWT auth with role-based access control, and a fully responsive UI deployed with CI/CD pipeline setup.',
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/Himanshupanwarrr12/DevMatch',
+    demo: null,
   },
   {
     name: 'FluxRide',
     stack: ['Node.js', 'TypeScript', 'Apache Kafka', 'PostgreSQL', 'Redis', 'Docker'],
     description:
       'An event-driven microservices ride-sharing backend with 6 decoupled services communicating via Kafka, Redis distributed locking, real-time geospatial driver matching, JWT auth, and full Docker Compose orchestration.',
-    github: '#',
+    github: 'https://github.com/Himanshupanwarrr12/FluxRide',
     demo: null,
   },
 ]
