@@ -1,72 +1,50 @@
-# Himanshu Panwar — Software Developer Portfolio
+# Hi there, I'm Himanshu Panwar 👋
 
-A modern, responsive, and highly interactive portfolio built with React and Vite. Recently updated to feature a playful **cartoon/anime-inspired aesthetic** with custom animations, a custom cursor, and an animated Emo Robot character.
+I'm a **Software Developer** and **Full-Stack Engineer** based in Dehradun, India. I love building fast, scalable, production-ready web applications and have a strong passion for complex backend systems, from event-driven microservices to real-time applications.
 
-## ✨ Features
-
-*   **Cartoon / Anime Theme:** A vibrant, playful design with bold typography, thick borders, comic-style offset shadows, and a warm, colorful palette (Red, Teal, Yellow, Pink).
-*   **Animated Emo Robot:** A custom-built, pure CSS/JSX animated robot in the Hero section that follows your cursor with its eyes, blinks, waves, and shows speech bubbles on hover.
-*   **Custom Cursor:** A unique interactive cursor featuring a trailing comet tail of colored dots and click-burst sparkles.
-*   **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
-*   **Dynamic Sections:** Includes About, Experience, Projects, Skills, and Contact sections with smooth scroll animations.
-*   **Glassmorphism & Comic Styles:** Blends modern glassmorphism with retro comic/cartoon aesthetics.
-
-## 🛠️ Tech Stack
-
-*   **Frontend:** React (v19)
-*   **Build Tool:** Vite
-*   **Styling:** Tailwind CSS (v4) + Vanilla CSS for custom animations/theming
-*   **Icons:** React Icons
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-*   Node.js (v18 or higher recommended)
-*   npm (or your preferred package manager)
-
-### Installation
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/Himanshupanwarrr12/My-Portfolio.git
-    cd My-Portfolio
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-
-4.  Open your browser and navigate to `http://localhost:5173/`
-
-## 📦 Build for Production
-
-To create a production-ready build, run:
-
-```bash
-npm run build
-```
-
-This will generate optimized static assets in the `dist/` directory.
-
-## 🎨 Theme Details
-
-The styling is predominantly driven by Tailwind CSS, heavily customized via `index.css` to achieve the cartoon look.
-*   **Fonts:** `Outfit` (headings) and `Space Grotesk` (body).
-*   **Animations:** Uses custom CSS keyframes for the robot's idle bounce, antenna wobble, cursor trailing dots, and more.
-*   **Intersection Observer:** Used via a custom `useInView` hook to trigger scroll animations.
-
-## 🤝 Contact
-
-*   **Email:** himanshupanwar.dev@gmail.com
-*   **LinkedIn:** [linkedin.com/in/himanshu-war](https://linkedin.com/in/himanshu-war)
-*   **GitHub:** [github.com/himanshupanwarrr12](https://github.com/himanshupanwarrr12)
+Currently, I'm working as a **Software Developer Intern** at **Slog Solutions**, where I build full-stack applications using React, Next.js, TypeScript, and Node.js. I'm also pursuing my BCA at **Graphic Era Deemed to Be University**.
 
 ---
-*Designed & built by Himanshu Panwar · 2026*
+
+## 🛠️ Skills & Technologies
+
+Here are the technologies I work with:
+
+*   **Frontend:** JavaScript, TypeScript, React.js, Next.js, HTML/CSS
+*   **Backend:** Node.js, Express.js, Prisma
+*   **Databases:** PostgreSQL, MongoDB, Redis
+*   **DevOps & Architecture:** Docker, Docker Compose, Apache Kafka, Microservices
+*   **Tools:** Git, Postman, VS Code, Bun
+
+---
+
+## 💻 Experience
+
+**Software Developer Intern @ Slog Solutions Pvt. Ltd.** *(Apr 2026 – Present)*
+*   Built an AI-powered LMS using Ollama with translation, TTS, summarization, and prompt assistance features.
+*   Developed an offline exam portal with secure auth, assessment workflows, and candidate evaluation functionality.
+*   Working on REST APIs, MongoDB, PostgreSQL, and scalable full-stack architecture using React, Next.js, and TypeScript.
+
+---
+
+## 🚀 Featured Projects
+
+### Devmatch
+A real-time MERN application for live developer collaboration and matchmaking.
+*   **Tech Stack:** MongoDB, Express.js, React.js, Node.js, TypeScript, WebSockets.
+*   **Features:** WebSocket communication, JWT auth with role-based access control, fully responsive UI, and CI/CD pipeline setup.
+
+### FluxRide
+An event-driven microservices ride-sharing backend.
+*   **Tech Stack:** Node.js, TypeScript, Apache Kafka, PostgreSQL, Redis, Docker.
+*   **Features:** 6 decoupled services communicating via Kafka, Redis distributed locking, real-time geospatial driver matching, JWT auth, and full Docker Compose orchestration.
+
+---
+
+## 📬 Let's Connect!
+
+I'm always open to new opportunities, collaborations, and interesting conversations.
+
+*   📧 **Email:** [himanshupanwar.dev@gmail.com](mailto:himanshupanwar.dev@gmail.com)
+*   💼 **LinkedIn:** [linkedin.com/in/himanshu-war](https://linkedin.com/in/himanshu-war)
+*   🐙 **GitHub:** [github.com/himanshupanwarrr12](https://github.com/himanshupanwarrr12)
