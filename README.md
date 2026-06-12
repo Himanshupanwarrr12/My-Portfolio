@@ -10,9 +10,10 @@ Currently, I'm working as a **Software Developer Intern** at **Slog Solutions**,
 
 Here are the technologies I work with:
 
-*   **Frontend:** JavaScript, TypeScript, React.js, Next.js, HTML/CSS
-*   **Backend:** Node.js, Express.js, Prisma
-*   **Databases:** PostgreSQL, MongoDB, Redis
+*   **Languages:** JavaScript, TypeScript, Python, HTML/CSS
+*   **Frontend:** React.js, Next.js
+*   **Backend:** Node.js, Express.js, Prisma, Mongoose, Drizzle
+*   **Databases:** PostgreSQL, MongoDB, Redis, SQLite, Neon DB, SQL, CouchDB
 *   **DevOps & Architecture:** Docker, Docker Compose, Apache Kafka, Microservices
 *   **Tools:** Git, Postman, VS Code, Bun
 
