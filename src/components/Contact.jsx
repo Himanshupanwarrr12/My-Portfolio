@@ -8,11 +8,11 @@ export default function Contact() {
   const [ref, isVisible] = useInView({ threshold: 0.15 })
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 overflow-hidden" style={{ background: '#FFF8EE' }}>
+    <section id="contact" className="relative py-24 md:py-32 overflow-hidden" style={{ background: 'var(--dt-bg-secondary)', transition: 'background-color 0.4s ease' }}>
       {/* Background decorations */}
       <div className="orb orb-2 top-[10%] left-[10%] opacity-35" />
       <div className="orb orb-3 bottom-[5%] right-[15%] opacity-25" />
-      <div className="absolute top-0 left-0 w-full h-[2.5px]" style={{ background: '#1D1D1D' }} />
+      <div className="absolute top-0 left-0 w-full h-[2.5px]" style={{ background: 'var(--dt-border)' }} />
 
       {/* Particles */}
       <div className="particle left-[20%] bottom-0" style={{ animationDuration: '14s', animationDelay: '0s' }} />
@@ -38,8 +38,8 @@ export default function Contact() {
               style={{
                 background: '#FFD166',
                 borderBottomLeftRadius: '18px',
-                borderLeft: '2.5px solid #1D1D1D',
-                borderBottom: '2.5px solid #1D1D1D'
+                borderLeft: '2.5px solid var(--dt-border)',
+                borderBottom: '2.5px solid var(--dt-border)'
               }}
             />
             <div
@@ -47,8 +47,8 @@ export default function Contact() {
               style={{
                 background: '#2EC4B6',
                 borderTopRightRadius: '18px',
-                borderRight: '2.5px solid #1D1D1D',
-                borderTop: '2.5px solid #1D1D1D'
+                borderRight: '2.5px solid var(--dt-border)',
+                borderTop: '2.5px solid var(--dt-border)'
               }}
             />
 
@@ -58,7 +58,7 @@ export default function Contact() {
               style={{
                 fontFamily: '"Outfit", system-ui, sans-serif',
                 fontWeight: 800,
-                color: '#1D1D1D'
+                color: 'var(--dt-text-primary)'
               }}
             >
               Let's build something{' '}
@@ -67,7 +67,7 @@ export default function Contact() {
             </h2>
 
             {/* Subtext */}
-            <p className="text-sm sm:text-base mb-9 leading-relaxed relative z-10" style={{ color: '#3A3A3A', fontWeight: 400 }}>
+            <p className="text-sm sm:text-base mb-9 leading-relaxed relative z-10" style={{ color: 'var(--dt-text-secondary)', fontWeight: 400 }}>
               Open to opportunities, collaborations, and interesting
               conversations.
             </p>
@@ -83,8 +83,8 @@ export default function Contact() {
                 color: '#fff',
                 fontFamily: '"Outfit", system-ui, sans-serif',
                 fontWeight: 700,
-                border: '2.5px solid #1D1D1D',
-                boxShadow: '4px 4px 0px #1D1D1D'
+                border: '2.5px solid var(--dt-border)',
+                boxShadow: '4px 4px 0px var(--dt-shadow)'
               }}
             >
               <FiMail className="w-4 h-4" />
@@ -101,18 +101,18 @@ export default function Contact() {
                 aria-label="GitHub profile"
                 className="flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:-translate-y-[3px]"
                 style={{
-                  border: '2.5px solid #1D1D1D',
-                  background: '#fff',
-                  color: '#1D1D1D',
-                  boxShadow: '3px 3px 0px #1D1D1D'
+                  border: '2.5px solid var(--dt-border)',
+                  background: 'var(--dt-social-bg)',
+                  color: 'var(--dt-social-text)',
+                  boxShadow: '3px 3px 0px var(--dt-shadow)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = '#2EC4B6'
                   e.currentTarget.style.color = '#fff'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#fff'
-                  e.currentTarget.style.color = '#1D1D1D'
+                  e.currentTarget.style.background = 'var(--dt-social-bg)'
+                  e.currentTarget.style.color = 'var(--dt-social-text)'
                 }}
               >
                 <FiGithub className="w-5 h-5" />
@@ -124,18 +124,18 @@ export default function Contact() {
                 aria-label="LinkedIn profile"
                 className="flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:-translate-y-[3px]"
                 style={{
-                  border: '2.5px solid #1D1D1D',
-                  background: '#fff',
-                  color: '#1D1D1D',
-                  boxShadow: '3px 3px 0px #1D1D1D'
+                  border: '2.5px solid var(--dt-border)',
+                  background: 'var(--dt-social-bg)',
+                  color: 'var(--dt-social-text)',
+                  boxShadow: '3px 3px 0px var(--dt-shadow)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = '#FFD166'
                   e.currentTarget.style.color = '#1D1D1D'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#fff'
-                  e.currentTarget.style.color = '#1D1D1D'
+                  e.currentTarget.style.background = 'var(--dt-social-bg)'
+                  e.currentTarget.style.color = 'var(--dt-social-text)'
                 }}
               >
                 <FiLinkedin className="w-5 h-5" />

@@ -7,6 +7,7 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useCustomCursor } from './hooks/useCustomCursor'
+import { ThemeProvider } from './hooks/useTheme'
 
 /**
  * App — Root component that assembles all portfolio sections
@@ -16,7 +17,7 @@ export default function App() {
   useCustomCursor()
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar />
       <main>
         <Hero />
@@ -27,6 +28,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }

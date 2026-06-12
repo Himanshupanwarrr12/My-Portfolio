@@ -23,7 +23,7 @@ const SKILL_PILL_COLORS = [
   { bg: '#FFE8CC', text: '#1D1D1D' },
 ]
 
-const CARD_ACCENT_COLORS = ['#E63946', '#2EC4B6', '#FFD166', '#FF6B8A', '#E63946']
+const CARD_ACCENT_COLORS = ['#E63946', '#2EC4B6', '#FFD166', '#FF6B8A', '#E63946', '#2EC4B6']
 
 export default function Skills() {
   const [ref, isVisible] = useInView({ threshold: 0.1 })
@@ -40,11 +40,11 @@ export default function Skills() {
   }, [isVisible])
 
   return (
-    <section id="skills" className="relative py-24 md:py-32 overflow-hidden" style={{ background: '#FDF6EC' }}>
+    <section id="skills" className="relative py-24 md:py-32 overflow-hidden" style={{ background: 'var(--dt-bg-primary)', transition: 'background-color 0.4s ease' }}>
       {/* Background decoration */}
       <div className="orb orb-1 top-[30%] right-[5%] opacity-30" />
       <div className="absolute inset-0 doodle-dots pointer-events-none" />
-      <div className="absolute top-0 left-0 w-full h-[2.5px]" style={{ background: '#1D1D1D' }} />
+      <div className="absolute top-0 left-0 w-full h-[2.5px]" style={{ background: 'var(--dt-border)' }} />
 
       <div
         ref={ref}
@@ -79,7 +79,7 @@ export default function Skills() {
                   style={{
                     fontFamily: '"Outfit", system-ui, sans-serif',
                     fontWeight: 800,
-                    color: '#1D1D1D'
+                    color: 'var(--dt-text-primary)'
                   }}
                 >
                   {group.label}
@@ -96,8 +96,8 @@ export default function Skills() {
                       borderRadius: '50px',
                       background: SKILL_PILL_COLORS[(groupIdx + skillIdx) % SKILL_PILL_COLORS.length].bg,
                       color: SKILL_PILL_COLORS[(groupIdx + skillIdx) % SKILL_PILL_COLORS.length].text,
-                      border: '1.5px solid #1D1D1D',
-                      boxShadow: '2px 2px 0px #1D1D1D'
+                      border: '1.5px solid var(--dt-border)',
+                      boxShadow: '2px 2px 0px var(--dt-shadow)'
                     }}
                   >
                     {skill}

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       className="py-8 relative"
-      style={{ background: '#1D1D1D', borderTop: '2.5px solid #1D1D1D' }}
+      style={{ background: 'var(--dt-footer-bg)', borderTop: '2.5px solid var(--dt-border)', transition: 'background-color 0.4s ease' }}
     >
       {/* Colored dots decoration */}
       <div className="absolute top-4 left-6 flex gap-2">
@@ -23,7 +23,7 @@ export default function Footer() {
         <p
           style={{
             fontFamily: '"Outfit", system-ui, sans-serif',
-            color: '#FDF6EC',
+            color: 'var(--dt-footer-text)',
             fontSize: '0.9rem',
             fontWeight: 600,
             letterSpacing: '0.02em'

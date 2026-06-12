@@ -31,8 +31,8 @@ export default function Hero() {
           width: '70px', height: '70px',
           borderRadius: '50%',
           background: '#FFD166',
-          border: '2.5px solid #1D1D1D',
-          boxShadow: '3px 3px 0px #1D1D1D',
+          border: '2.5px solid var(--dt-border)',
+          boxShadow: '3px 3px 0px var(--dt-shadow)',
           opacity: 0.6
         }}
       />
@@ -44,8 +44,8 @@ export default function Hero() {
           width: '50px', height: '50px',
           borderRadius: '14px',
           background: '#2EC4B6',
-          border: '2.5px solid #1D1D1D',
-          boxShadow: '3px 3px 0px #1D1D1D',
+          border: '2.5px solid var(--dt-border)',
+          boxShadow: '3px 3px 0px var(--dt-shadow)',
           transform: 'rotate(15deg)',
           opacity: 0.5,
           animation: 'wiggle 4s ease-in-out infinite'
@@ -59,8 +59,8 @@ export default function Hero() {
           width: '45px', height: '45px',
           borderRadius: '50%',
           background: '#FF6B8A',
-          border: '2.5px solid #1D1D1D',
-          boxShadow: '3px 3px 0px #1D1D1D',
+          border: '2.5px solid var(--dt-border)',
+          boxShadow: '3px 3px 0px var(--dt-shadow)',
           opacity: 0.4
         }}
       />
@@ -72,16 +72,16 @@ export default function Hero() {
           width: '40px', height: '40px',
           borderRadius: '10px',
           background: '#E63946',
-          border: '2.5px solid #1D1D1D',
-          boxShadow: '3px 3px 0px #1D1D1D',
+          border: '2.5px solid var(--dt-border)',
+          boxShadow: '3px 3px 0px var(--dt-shadow)',
           transform: 'rotate(-12deg)',
           opacity: 0.4,
           animation: 'wiggle 5s ease-in-out infinite reverse'
         }}
       />
       {/* Small dots scattered */}
-      <div className="absolute pointer-events-none" style={{ top: '35%', left: '22%', width: '12px', height: '12px', borderRadius: '50%', background: '#1D1D1D', opacity: 0.12 }} />
-      <div className="absolute pointer-events-none" style={{ top: '60%', right: '30%', width: '8px', height: '8px', borderRadius: '50%', background: '#1D1D1D', opacity: 0.1 }} />
+      <div className="absolute pointer-events-none" style={{ top: '35%', left: '22%', width: '12px', height: '12px', borderRadius: '50%', background: 'var(--dt-text-primary)', opacity: 0.12 }} />
+      <div className="absolute pointer-events-none" style={{ top: '60%', right: '30%', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--dt-text-primary)', opacity: 0.1 }} />
       <div className="absolute pointer-events-none" style={{ top: '45%', left: '45%', width: '10px', height: '10px', borderRadius: '50%', background: '#E63946', opacity: 0.15 }} />
 
       {/* ---- Two-Column Layout ---- */}
@@ -94,7 +94,7 @@ export default function Hero() {
             <span
               style={{
                 background: '#FFD166',
-                border: '2px solid #1D1D1D',
+                border: '2px solid var(--dt-border)',
                 borderRadius: '50px',
                 padding: '6px 20px',
                 fontFamily: '"Outfit", system-ui, sans-serif',
@@ -103,7 +103,7 @@ export default function Hero() {
                 color: '#1D1D1D',
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
-                boxShadow: '2px 2px 0px #1D1D1D',
+                boxShadow: '2px 2px 0px var(--dt-shadow)',
                 display: 'inline-block'
               }}
             >
@@ -113,9 +113,9 @@ export default function Hero() {
 
           {/* Ornamental dashes */}
           <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
-            <div style={{ width: '40px', height: '2.5px', background: '#1D1D1D', borderRadius: '2px' }} />
-            <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#E63946', border: '2px solid #1D1D1D' }} />
-            <div style={{ width: '40px', height: '2.5px', background: '#1D1D1D', borderRadius: '2px' }} />
+            <div style={{ width: '40px', height: '2.5px', background: 'var(--dt-text-primary)', borderRadius: '2px' }} />
+            <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#E63946', border: '2px solid var(--dt-border)' }} />
+            <div style={{ width: '40px', height: '2.5px', background: 'var(--dt-text-primary)', borderRadius: '2px' }} />
           </div>
 
           {/* Main heading */}
@@ -124,7 +124,7 @@ export default function Hero() {
             style={{
               fontFamily: '"Outfit", system-ui, sans-serif',
               fontWeight: 900,
-              color: '#1D1D1D'
+              color: 'var(--dt-text-primary)'
             }}
           >
             Himanshu Panwar
@@ -147,7 +147,7 @@ export default function Hero() {
           {/* Tagline */}
           <p
             className="text-base sm:text-lg tracking-wide mb-10 max-w-md leading-relaxed"
-            style={{ color: '#3A3A3A', fontWeight: 400 }}
+            style={{ color: 'var(--dt-text-secondary)', fontWeight: 400 }}
           >
             I build fast, scalable, production-ready web apps.
           </p>
@@ -165,8 +165,8 @@ export default function Hero() {
                 fontFamily: '"Outfit", system-ui, sans-serif',
                 fontWeight: 700,
                 fontSize: '0.95rem',
-                border: '2.5px solid #1D1D1D',
-                boxShadow: '4px 4px 0px #1D1D1D',
+                border: '2.5px solid var(--dt-border)',
+                boxShadow: '4px 4px 0px var(--dt-shadow)',
                 letterSpacing: '0.02em'
               }}
             >
@@ -178,13 +178,13 @@ export default function Hero() {
               style={{
                 padding: '14px 36px',
                 borderRadius: '50px',
-                background: '#fff',
-                color: '#1D1D1D',
+                background: 'var(--dt-card-bg)',
+                color: 'var(--dt-text-primary)',
                 fontFamily: '"Outfit", system-ui, sans-serif',
                 fontWeight: 700,
                 fontSize: '0.95rem',
-                border: '2.5px solid #1D1D1D',
-                boxShadow: '4px 4px 0px #1D1D1D',
+                border: '2.5px solid var(--dt-border)',
+                boxShadow: '4px 4px 0px var(--dt-shadow)',
                 letterSpacing: '0.02em'
               }}
             >
@@ -209,7 +209,7 @@ export default function Hero() {
         >
           Scroll
         </span>
-        <div style={{ width: '2px', height: '40px', background: '#1D1D1D', borderRadius: '2px' }} />
+        <div style={{ width: '2px', height: '40px', background: 'var(--dt-text-primary)', borderRadius: '2px' }} />
         <svg className="w-4 h-4 animate-bounce-down" fill="none" stroke="#E63946" viewBox="0 0 24 24" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>

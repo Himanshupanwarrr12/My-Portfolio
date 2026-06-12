@@ -8,12 +8,12 @@ export default function About() {
   const [ref, isVisible] = useInView({ threshold: 0.15 })
 
   return (
-    <section id="about" className="relative py-24 md:py-32 overflow-hidden" style={{ background: '#FFF8EE' }}>
+    <section id="about" className="relative py-24 md:py-32 overflow-hidden" style={{ background: 'var(--dt-bg-secondary)', transition: 'background-color 0.4s ease' }}>
       {/* Background decoration */}
       <div className="orb orb-2 -top-20 -right-20 opacity-50" />
       {/* Dot pattern */}
       <div className="absolute inset-0 doodle-dots pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-full h-[2.5px]" style={{ background: '#1D1D1D' }} />
+      <div className="absolute bottom-0 left-0 w-full h-[2.5px]" style={{ background: 'var(--dt-border)' }} />
 
       <div
         ref={ref}
@@ -29,7 +29,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-12 md:gap-16 items-center">
           {/* Bio text */}
           <div className="global-card p-8 md:p-10">
-            <p className="text-base sm:text-lg leading-[1.9]" style={{ color: '#3A3A3A', fontWeight: 400 }}>
+            <p className="text-base sm:text-lg leading-[1.9]" style={{ color: 'var(--dt-text-secondary)', fontWeight: 400 }}>
               I'm a{' '}
               <strong style={{ color: '#E63946', fontWeight: 700 }}>
                 Software Developer
@@ -42,7 +42,7 @@ export default function About() {
               TypeScript, and Node.js. I love working on complex backend
               systems — from event-driven microservices to real-time apps. I'm
               pursuing my BCA at{' '}
-              <strong style={{ color: '#1D1D1D', fontWeight: 700 }}>
+              <strong style={{ color: 'var(--dt-text-primary)', fontWeight: 700 }}>
                 Graphic Era Deemed to Be University
               </strong>
               .
@@ -58,7 +58,7 @@ export default function About() {
                 style={{
                   borderRadius: '22px',
                   background: '#FFD166',
-                  border: '2.5px solid #1D1D1D',
+                  border: '2.5px solid var(--dt-border)',
                   transform: 'translate(8px, 8px)',
                   zIndex: 0
                 }}
@@ -68,7 +68,7 @@ export default function About() {
                 style={{
                   borderRadius: '22px',
                   background: 'linear-gradient(135deg, #FFD166 0%, #2EC4B6 100%)',
-                  border: '2.5px solid #1D1D1D',
+                  border: '2.5px solid var(--dt-border)',
                   zIndex: 1
                 }}
               >
@@ -81,8 +81,8 @@ export default function About() {
                   }}
                 />
                 {/* Decorative corner dots */}
-                <div className="absolute top-4 right-4 w-3 h-3 rounded-full" style={{ background: '#E63946', border: '1.5px solid #1D1D1D' }} />
-                <div className="absolute bottom-4 left-4 w-3 h-3 rounded-full" style={{ background: '#FF6B8A', border: '1.5px solid #1D1D1D' }} />
+                <div className="absolute top-4 right-4 w-3 h-3 rounded-full" style={{ background: '#E63946', border: '1.5px solid var(--dt-border)' }} />
+                <div className="absolute bottom-4 left-4 w-3 h-3 rounded-full" style={{ background: '#FF6B8A', border: '1.5px solid var(--dt-border)' }} />
                 <span
                   className="relative z-10 select-none"
                   style={{

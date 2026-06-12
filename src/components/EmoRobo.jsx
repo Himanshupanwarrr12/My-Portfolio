@@ -82,15 +82,15 @@ export default function EmoRobo() {
           top: '-52px',
           left: '50%',
           transform: `translateX(-50%) scale(${showBubble ? 1 : 0})`,
-          background: '#fff',
-          border: '2.5px solid #1D1D1D',
+          background: 'var(--dt-bubble-bg)',
+          border: '2.5px solid var(--dt-border)',
           borderRadius: '14px',
           padding: '8px 16px',
           fontFamily: '"Outfit", system-ui, sans-serif',
           fontWeight: 700,
           fontSize: '0.8rem',
-          color: '#1D1D1D',
-          boxShadow: '3px 3px 0px #1D1D1D',
+          color: 'var(--dt-text-primary)',
+          boxShadow: '3px 3px 0px var(--dt-shadow)',
           whiteSpace: 'nowrap',
           transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
           zIndex: 20,
@@ -106,10 +106,11 @@ export default function EmoRobo() {
             transform: 'translateX(-50%) rotate(45deg)',
             width: '14px',
             height: '14px',
-            background: '#fff',
-            border: '2.5px solid #1D1D1D',
+            background: 'var(--dt-bubble-bg)',
             borderTop: 'none',
             borderLeft: 'none',
+            borderRight: '2.5px solid var(--dt-border)',
+            borderBottom: '2.5px solid var(--dt-border)',
             zIndex: -1,
           }}
         />
@@ -125,7 +126,7 @@ export default function EmoRobo() {
               style={{
                 width: '3px',
                 height: '18px',
-                background: '#1D1D1D',
+                background: 'var(--dt-text-primary)',
                 margin: '0 auto',
                 animation: 'antenna-wobble 2s ease-in-out infinite',
                 transformOrigin: 'bottom center',
@@ -142,7 +143,7 @@ export default function EmoRobo() {
                 height: '12px',
                 borderRadius: '50%',
                 background: '#E63946',
-                border: '2px solid #1D1D1D',
+                border: '2px solid var(--dt-border)',
                 animation: 'antenna-glow 2s ease-in-out infinite',
                 boxShadow: '0 0 8px rgba(230, 57, 70, 0.5)',
               }}
@@ -156,9 +157,9 @@ export default function EmoRobo() {
             width: '90px',
             height: '75px',
             background: '#2EC4B6',
-            border: '2.5px solid #1D1D1D',
+            border: '2.5px solid var(--dt-border)',
             borderRadius: '20px 20px 16px 16px',
-            boxShadow: '4px 4px 0px #1D1D1D',
+            boxShadow: '4px 4px 0px var(--dt-shadow)',
             position: 'relative',
             overflow: 'hidden',
           }}
@@ -171,7 +172,7 @@ export default function EmoRobo() {
               left: '8px',
               right: '8px',
               bottom: '12px',
-              background: '#1D1D1D',
+              background: 'var(--dt-visor-bg)',
               borderRadius: '12px',
               display: 'flex',
               alignItems: 'center',
@@ -248,7 +249,7 @@ export default function EmoRobo() {
               transform: 'translateX(-50%)',
               width: '24px',
               height: '2.5px',
-              background: '#1D1D1D',
+              background: 'var(--dt-border)',
               borderRadius: '2px',
             }}
           />
@@ -284,8 +285,8 @@ export default function EmoRobo() {
           style={{
             width: '20px',
             height: '8px',
-            background: '#6B6B6B',
-            border: '2px solid #1D1D1D',
+            background: 'var(--dt-robot-metal)',
+            border: '2px solid var(--dt-border)',
             margin: '-2px auto 0',
             borderRadius: '0 0 4px 4px',
           }}
@@ -297,9 +298,9 @@ export default function EmoRobo() {
             width: '70px',
             height: '50px',
             background: '#FFD166',
-            border: '2.5px solid #1D1D1D',
+            border: '2.5px solid var(--dt-border)',
             borderRadius: '10px 10px 14px 14px',
-            boxShadow: '3px 3px 0px #1D1D1D',
+            boxShadow: '3px 3px 0px var(--dt-shadow)',
             margin: '-2px auto 0',
             position: 'relative',
           }}
@@ -313,7 +314,7 @@ export default function EmoRobo() {
               transform: 'translateX(-50%)',
               width: '30px',
               height: '20px',
-              border: '2px solid #1D1D1D',
+              border: '2px solid var(--dt-border)',
               borderRadius: '6px',
               background: 'rgba(29,29,29,0.08)',
               display: 'flex',
@@ -325,7 +326,7 @@ export default function EmoRobo() {
             {/* Status lights */}
             <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#E63946', animation: 'status-blink 1.5s ease infinite' }} />
             <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#2EC4B6', animation: 'status-blink 1.5s ease infinite 0.5s' }} />
-            <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#FFD166', border: '1px solid #1D1D1D' }} />
+            <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#FFD166', border: '1px solid var(--dt-border)' }} />
           </div>
 
           {/* Arms */}
@@ -338,9 +339,9 @@ export default function EmoRobo() {
               width: '12px',
               height: '30px',
               background: '#2EC4B6',
-              border: '2px solid #1D1D1D',
+              border: '2px solid var(--dt-border)',
               borderRadius: '8px',
-              boxShadow: '2px 2px 0px #1D1D1D',
+              boxShadow: '2px 2px 0px var(--dt-shadow)',
               animation: 'arm-wave-left 4s ease-in-out infinite',
               transformOrigin: 'top center',
             }}
@@ -354,9 +355,9 @@ export default function EmoRobo() {
               width: '12px',
               height: '30px',
               background: '#2EC4B6',
-              border: '2px solid #1D1D1D',
+              border: '2px solid var(--dt-border)',
               borderRadius: '8px',
-              boxShadow: '2px 2px 0px #1D1D1D',
+              boxShadow: '2px 2px 0px var(--dt-shadow)',
               animation: 'arm-wave-right 4s ease-in-out infinite 0.3s',
               transformOrigin: 'top center',
             }}
@@ -369,20 +370,20 @@ export default function EmoRobo() {
             style={{
               width: '18px',
               height: '16px',
-              background: '#6B6B6B',
-              border: '2px solid #1D1D1D',
+              background: 'var(--dt-robot-metal)',
+              border: '2px solid var(--dt-border)',
               borderRadius: '0 0 8px 8px',
-              boxShadow: '2px 2px 0px #1D1D1D',
+              boxShadow: '2px 2px 0px var(--dt-shadow)',
             }}
           />
           <div
             style={{
               width: '18px',
               height: '16px',
-              background: '#6B6B6B',
-              border: '2px solid #1D1D1D',
+              background: 'var(--dt-robot-metal)',
+              border: '2px solid var(--dt-border)',
               borderRadius: '0 0 8px 8px',
-              boxShadow: '2px 2px 0px #1D1D1D',
+              boxShadow: '2px 2px 0px var(--dt-shadow)',
             }}
           />
         </div>

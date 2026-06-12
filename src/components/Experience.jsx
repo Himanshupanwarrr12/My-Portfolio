@@ -25,10 +25,10 @@ export default function Experience() {
   const [ref, isVisible] = useInView({ threshold: 0.15 })
 
   return (
-    <section id="experience" className="relative py-24 md:py-32 overflow-hidden" style={{ background: '#FDF6EC' }}>
+    <section id="experience" className="relative py-24 md:py-32 overflow-hidden" style={{ background: 'var(--dt-bg-primary)', transition: 'background-color 0.4s ease' }}>
       {/* Subtle background orb */}
       <div className="orb orb-3 -bottom-32 -left-32 opacity-40" />
-      <div className="absolute top-0 left-0 w-full h-[2.5px]" style={{ background: '#1D1D1D' }} />
+      <div className="absolute top-0 left-0 w-full h-[2.5px]" style={{ background: 'var(--dt-border)' }} />
 
       <div
         ref={ref}
@@ -46,7 +46,7 @@ export default function Experience() {
           <div
             className="absolute left-4 md:left-6 top-2 bottom-2 w-[3px] rounded-full"
             style={{
-              background: 'repeating-linear-gradient(180deg, #1D1D1D 0px, #1D1D1D 8px, transparent 8px, transparent 16px)'
+              background: 'repeating-linear-gradient(180deg, var(--dt-border) 0px, var(--dt-border) 8px, transparent 8px, transparent 16px)'
             }}
           />
 
@@ -57,8 +57,8 @@ export default function Experience() {
                 className="absolute left-[10px] md:left-[18px] top-2 w-4 h-4 rounded-full z-10"
                 style={{
                   background: '#E63946',
-                  border: '2.5px solid #1D1D1D',
-                  boxShadow: '2px 2px 0px #1D1D1D'
+                  border: '2.5px solid var(--dt-border)',
+                  boxShadow: '2px 2px 0px var(--dt-shadow)'
                 }}
               />
 
@@ -71,7 +71,7 @@ export default function Experience() {
                     style={{
                       fontFamily: '"Outfit", system-ui, sans-serif',
                       fontWeight: 800,
-                      color: '#1D1D1D'
+                      color: 'var(--dt-text-primary)'
                     }}
                   >
                     {exp.company}
@@ -82,8 +82,8 @@ export default function Experience() {
                       background: '#FFD166',
                       color: '#1D1D1D',
                       fontWeight: 600,
-                      border: '2px solid #1D1D1D',
-                      boxShadow: '2px 2px 0px #1D1D1D'
+                      border: '2px solid var(--dt-border)',
+                      boxShadow: '2px 2px 0px var(--dt-shadow)'
                     }}
                   >
                     {exp.duration} · {exp.location}
@@ -103,13 +103,13 @@ export default function Experience() {
                     <li
                       key={j}
                       className="relative pl-6 text-sm sm:text-[0.94rem] leading-relaxed"
-                      style={{ color: '#3A3A3A', fontWeight: 400 }}
+                      style={{ color: 'var(--dt-text-secondary)', fontWeight: 400 }}
                     >
                       <span
                         className="absolute left-0 top-[7px] w-[10px] h-[10px] rounded-full"
                         style={{
                           background: BULLET_COLORS[j % BULLET_COLORS.length],
-                          border: '1.5px solid #1D1D1D'
+                          border: '1.5px solid var(--dt-border)'
                         }}
                       />
                       {bullet}
