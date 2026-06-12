@@ -7,9 +7,10 @@ import { useEffect, useRef } from 'react'
  */
 
 const SKILL_GROUPS = [
-  { label: 'Frontend',  icon: '🎨', items: ['JavaScript', 'TypeScript', 'React.js', 'Next.js', 'HTML/CSS'] },
-  { label: 'Backend',   icon: '⚙️', items: ['Node.js', 'Express.js', 'Prisma'] },
-  { label: 'Databases', icon: '🗄️', items: ['PostgreSQL', 'MongoDB', 'Redis'] },
+  { label: 'Languages', icon: '📝', items: ['JavaScript', 'TypeScript', 'Python', 'HTML/CSS'] },
+  { label: 'Frontend',  icon: '🎨', items: ['React.js', 'Next.js'] },
+  { label: 'Backend',   icon: '⚙️', items: ['Node.js', 'Express.js', 'Prisma', 'Mongoose', 'Drizzle'] },
+  { label: 'Databases', icon: '🗄️', items: ['PostgreSQL', 'MongoDB', 'Redis', 'SQLite', 'Neon DB', 'SQL', 'CouchDB'] },
   { label: 'DevOps',    icon: '🐳', items: ['Docker', 'Docker Compose', 'Apache Kafka'] },
   { label: 'Tools',     icon: '🛠️', items: ['Git', 'Postman', 'VS Code', 'Bun'] },
 ]
