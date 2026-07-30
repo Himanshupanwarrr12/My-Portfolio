@@ -64,6 +64,7 @@
   --dt-robot-metal: #6B6B6B;
   --dt-visor-bg: #1D1D1D;
   --dt-bubble-bg: #fff;
+  --dt-glyph-opacity: 0.06;
 }
 
 html.dark {
@@ -82,6 +83,7 @@ html.dark {
   --dt-robot-metal: #3A3A52;
   --dt-visor-bg: #0D0D16;
   --dt-bubble-bg: #1A1A2A;
+  --dt-glyph-opacity: 0.04;
 }
 
 /* ----- Base Styles ----- */
@@ -396,6 +398,38 @@ h6 {
 .hero-bg {
   background: var(--dt-bg-primary);
   transition: background-color 0.4s ease;
+}
+
+/* ================================================================
+   HERO BACKGROUND GLYPH — slow drift animation
+   ================================================================ */
+@keyframes glyph-drift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(8px, -12px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-5px, 6px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translate(4px, 10px) rotate(0.8deg);
+  }
+}
+
+.hero-glyph {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 800;
+  color: var(--dt-text-primary);
+  opacity: var(--dt-glyph-opacity);
+  animation: glyph-drift 20s ease-in-out infinite;
+  transition: opacity 0.4s ease, color 0.4s ease;
+  z-index: 1;
+  line-height: 1;
 }
 
 .name-gradient {
